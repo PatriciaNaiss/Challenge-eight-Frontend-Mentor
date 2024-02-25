@@ -1,0 +1,119 @@
+*{
+  box-sizing: border-box;
+}
+
+$very-dark-blue: #090b1a;
+$dark-blue: #1b1938;
+$soft-violet: #aa5cdb;
+$white: #ffffff;
+$white-p: #ffffff75;
+$white-heading: #ffffff60;
+$font-inter:'Inter', sans-serif;
+$font-lexend: 'Lexend Deca', sans-serif;
+$font-weight-400: 400;
+$font-weight-700: 700;
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  min-height: 100vh;
+  color: $white;
+  background: $very-dark-blue;
+  font-family: $font-lexend;
+  font-weight: $font-weight-400;
+}
+main {position: relative;
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: space-between;
+  border-radius: 10px;
+  background: $dark-blue;
+  max-width: 1090px;
+  h1 {
+    font-family: $font-inter;
+    font-weight: $font-weight-700;
+    font-size: 38px;
+    margin: 0;
+    span {
+      color: $soft-violet;
+    }
+  }
+  p {
+    margin: 0;
+    color: $white-p;
+    line-height: 25px;
+  }
+  section{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    padding: 70px;
+    width: 50%;
+    article {
+      display: flex;
+      flex-flow: wrap row;
+      justify-content: space-between;
+      margin-top: auto;
+      width: 90%;
+    }
+    h2 {
+      font-size: 25px;
+      font-family: $font-inter;
+      margin: 0;
+    }
+    h3 {
+      margin-top: 10px;
+      margin-bottom: 0;
+      text-transform: uppercase;
+      font-family: $font-weight-400;
+      font-size: 12px;
+      color: $white-heading;
+
+    }
+  }
+  .img-desktop {
+    display: block;
+    height:100%;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+    filter: invert(25%) sepia(70%) saturate(350%) hue-rotate(235deg) brightness(60%) contrast(120%);
+  }
+  .img-mobile {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px){
+main {
+  flex-flow: wrap column-reverse;
+  max-width: 550px;
+  margin: 20px;text-align: center;
+  section {
+    width: 100%;
+    padding: 35px;
+    article {
+      display: flex;
+      flex-flow: wrap column;
+      width: 100%;
+      div {
+        margin-top: 40px;
+      }
+    }
+  }
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  .img-desktop {
+    display: none;
+  }
+  .img-mobile {
+    display: block;
+    height:100%;
+    width: 100%;
+    border-radius: 10px 10px 0 0 ;
+    filter: invert(25%) sepia(70%) saturate(350%) hue-rotate(235deg) brightness(60%) contrast(120%);
+    }
+  }
+}
